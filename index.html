@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiplication Practice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Multiplication Practice Game</h1>
+
+        <div class="setup">
+            <label>Lower Limit: <input type="number" id="lowerLimit" value="1"></label>
+            <label>Upper Limit: <input type="number" id="upperLimit" value="12"></label>
+            <label>Time Per Question (sec): <input type="number" id="timeLimit" value="5"></label>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+
+        <div class="question-box hidden" id="questionBox">
+            <div id="questionText"></div>
+            <input type="number" id="answerInput" placeholder="Enter answer" autocomplete="off">
+            <div class="timer">⏱️ Time Left: <span id="timeDisplay">0</span>s</div>
+            <button onclick="stopGame()">Stop Game</button>
+        </div>
+
+        <div class="score-box hidden" id="scoreBox">
+            <h2>Game Over!</h2>
+            <p>✅ Correct: <span id="correctCount">0</span></p>
+            <p>❌ Wrong: <span id="wrongCount">0</span></p>
+            <button onclick="showResults()">Show All Results</button>
+            <div id="resultsList" class="results hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
